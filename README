@@ -38,10 +38,9 @@ the DISPLAY environment variable is set correctly, e.g.:
 In order to display status info in the bar, you can do something
 like this in your .xinitrc:
 
-    while true
+    while xsetroot -name "`date` `uptime | sed 's/.*,//'`"
     do
-        xsetroot -name "`date` `uptime | sed 's/.*,//'`"
-        sleep 1
+    	sleep 1
     done &
     exec dwm
 
@@ -50,3 +49,23 @@ Configuration
 -------------
 The configuration of dwm is done by creating a custom config.h
 and (re)compiling the source code.
+
+================
+
+Added plagins:
+  pertag
+  noborder
+  bstack
+  attachside
+  movestack
+  viewontag
+  tractable_arrows
+Deleted rules for windows classes (modified applyrules function)
+Deleted bhorizontal layout
+Deleted some unused identifiers
+Deleted some keys.
+Call to deprecated function XKeyCodeToKeySym changed to XkbKeyCodeToKeySym
+Applayed patch zoomswap
+
+              
+              
